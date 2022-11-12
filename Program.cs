@@ -25,32 +25,11 @@ namespace LineComparison
             Double Points3 = Math.Pow((a2-a1),2);
             Double Points4 = Math.Pow((b2-b1),2);   
             Double TotalLengthOfLine2 = Math.Sqrt(Points3 + Points4);
-
-            if (TotalLengthOfLine1.CompareTo(TotalLengthOfLine2) < 0) 
-            Console.WriteLine("Line2 is longer than Line1");
-            else if (TotalLengthOfLine1.CompareTo(TotalLengthOfLine2) > 0) 
-            Console.WriteLine("Line1 is longer than line2");
-            else
+            bool status = TotalLengthOfLine1.Equals(TotalLengthOfLine2);
+            if (status) 
             Console.WriteLine("Line1 is equal to Line2");
-            
-           
-           
-
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
+            else
+            Console.WriteLine("Line1 is not equal to Line2");
         }
     }
 }
